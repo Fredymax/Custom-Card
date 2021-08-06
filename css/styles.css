@@ -1,0 +1,222 @@
+:root {
+  --backgroundPrimaryColor: #ffffff;
+  --primaryColor: #f1f1f1;
+  --textPrimaryColor: #979a9c;
+  --textSecondaryColor: #0695E1;
+  --borderPrimaryColor: #E1E8ED;
+}
+body {
+  margin: 0;
+  font-family: system-ui, Helvetica, sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--primaryColor);
+}
+.wrapper {
+  max-width: 1020px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 110px;
+  line-height: 100px;
+}
+
+.profile-content {
+  height: 700px;
+  background: var(--backgroundPrimaryColor);
+  background-size: cover;
+  max-width: 337px;
+  margin: 1em auto;
+  border-radius: 1em;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.profile {
+  flex: 1;
+}
+
+.profile-wrapper{
+  padding-inline: 14px;
+}
+.profile-menu {
+  inline-size: 100%;
+  height: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 1px;
+}
+.profile-menu i {
+  font-size: .3rem;
+  color: var(--primaryColor);
+}
+
+.user {
+  padding-block-start: 13px;
+}
+
+.user-frame {
+  margin: 0px;
+  position: relative;
+}
+
+.user-frame::after {
+  background-color: var(--backgroundPrimaryColor);
+  content: '⭐';
+  display: block;
+  border: 1px solid var(--primaryColor);
+  line-height: 14px;
+  font-size: .6rem;
+  inline-size: 16px;
+  block-size: 16px;
+  border-radius: 50%;
+  border-width: 2px;
+  box-shadow: 0 0 0 4px var(--backgroundPrimaryColor);
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  margin-bottom: -7px;
+}
+.info-contact {
+  color: var(--textPrimaryColor);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.info-data {
+  display: block;
+  inline-size: 50%;
+  user-select: all;
+}
+.info-data:first-child {
+  text-align: right;
+  padding-inline-end: 15px;
+}
+.info-data:last-child {
+  text-align: left;
+  padding-inline-start: 15px;
+}
+.info-separate {
+  border-right: var(--borderPrimaryColor) 1px solid;
+}
+.user-image {
+  inline-size: 132px;
+  block-size: 132px;
+  border-radius: 50%;
+}
+
+.details {
+  background: var(--backgroundPrimaryColor);
+  padding: 1px;
+  font-size: 1.2em;
+}
+
+
+.datails-name{
+  margin-block-end: 5px;
+  font-weight: bold;
+}
+.city {
+  background: var(--backgroundPrimaryColor);
+  margin: 0;
+  padding: 1em;
+  padding-block-start: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--textPrimaryColor);
+  font-weight: bold;
+  user-select: all;
+  cursor: default;
+}
+
+.social {
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.020);
+  display: flex;
+  justify-content: space-evenly;
+  margin-block-start: 2em;
+  flex-wrap: wrap;
+}
+
+.social-data {
+  font-size: 1em;
+  padding-block: .9em;
+  inline-size: 84.25px;
+  max-block-size: 67.78px;
+  border: 1px solid var(--borderPrimaryColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  user-select: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: font-size .25s, color .25s;
+}
+.social-data:hover {
+  font-size: 1.2em;
+  color: var(--textSecondaryColor);
+}
+.social-data:first-child {
+  border-left: none ;
+}
+.social-data:last-child {
+  border-left: none ;
+}
+
+.bio {
+  display: flex;
+  background: white;
+  color: var(--textPrimaryColor);
+  text-align: justify;
+  font-size: .9em;
+  padding-inline: 18px;
+}
+
+.list-links{
+  display: flex;
+}
+.list-links div {
+  border-top: var(--borderPrimaryColor) 1px solid ;
+  border-bottom: var(--borderPrimaryColor) 1px solid ;
+  inline-size: 50%;
+  padding-block: 1em;
+  cursor: pointer;
+}
+
+.list-links div:first-child {
+  border-right: var(--borderPrimaryColor) 1px solid ;
+}
+
+.list-links div:hover .item-link {
+  color: var(--backgroundPrimaryColor) !important;
+}
+.list-links div:hover {
+  background-color: var(--textSecondaryColor);
+}
+.item-link {
+  text-decoration-line: none;
+  color: var(--textSecondaryColor);
+  font-weight: 500;
+  padding-inline: 2.62em;
+  padding-block: 1em;
+}
+.credits{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 210px;
+  background-image: linear-gradient(to top, var(--textSecondaryColor) 37%, transparent 37%);
+  position: relative;
+}
+.text-credits {
+  position: absolute;
+  inset-block-end: 30px;
+  color: #fff;
+  line-height: .9em;
+}
